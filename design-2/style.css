@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background: #090909;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 92%;
+  max-width: 1400px;
+  margin: auto;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 28px;
+}
+
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: #f5f2ec;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.heading-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -18px;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+.drinks {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 18px;
+  margin-top: 18px;
+}
+.drink-card {
+  width: 260px;
+  height: 420px;
+  background: linear-gradient(180deg, #1b1a1a, #131313);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.active {
+  border: 1px solid rgba(139, 29, 10, 0.65);
+
+  background:
+    radial-gradient(
+      circle at bottom,
+      rgba(255, 145, 40, 0.08),
+      transparent 45%
+    ),
+    linear-gradient(180deg, #1b1a1a 0%, #141414 100%);
+
+  box-shadow:
+    0 0 4px rgba(255, 145, 40, 0.25),
+    0 0 16px rgba(255, 145, 40, 0.18),
+    0 10px 35px rgba(255, 120, 20, 0.12);
+
+  transition: 0.35s ease;
+}
+.drink-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top, rgba(255, 180, 90, 0.06), transparent 40%),
+    radial-gradient(circle at bottom, rgba(255, 120, 20, 0.08), transparent 60%);
+}
+.drink-card::after {
+  content: "";
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  bottom: -18px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 145, 40, 0.18);
+  filter: blur(20px);
+  opacity: 0.75;
+  z-index: -1;
+}
+.badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 6px 12px;
+  border: 0.5px solid rgba(255, 145, 40, 0.55);
+  border-radius: 999px;
+  color: #ff9628;
+  font-size: 11px;
+  font-weight: 500;
+  background: #1a1714;
+}
+.drink-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+.drink-image img {
+  width: 170px;
+  height: auto;
+  object-fit: contain;
+}
+.drink-content {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.drink-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+.drink-content p {
+  color: #9d9d9d;
+  font-size: 11px;
+  margin-top: 6px;
+}
+.divider {
+  width: 45px;
+  height: 1px;
+  background: #ff9628;
+  margin: 14px 0;
+}
+.drink-content h3 {
+  margin: -8px;
+  color: #ff9628;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+}
+.drink-card:last-child .drink-image img {
+  width: 180px;
+  margin-top: 45px;
+}
+
+/* chef section */
+.chef-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+/* .chef-section {
+  width: 1120px;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  padding: 28px 40px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #171717, #101010);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+} */
+.chef-section{
+    width:1094px;
+    display:flex;
+    align-items:center;
+    gap:45px;
+    padding:28px 40px;
+    position:relative;
+    overflow:hidden;
+    border-radius:24px;
+    background:
+        radial-gradient(circle at top left, rgba(255,145,40,.08) 0%, transparent 30%),
+        linear-gradient(180deg, #1a1a1a 0%, #111111 100%);
+    border:1px solid rgba(255,255,255,.05);
+    box-shadow:0 12px 28px rgba(0,0,0,.45);
+}
+
+.chef-section::before{
+    content:"";
+    position:absolute;
+    inset:1px;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,.03);
+    pointer-events:none;
+}
+
+.chef-section::after{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    left:-180px;
+    top:-170px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(255,145,40,.22) 0%, rgba(255,145,40,.08) 35%, transparent 75%);
+    filter:blur(45px);
+    pointer-events:none;
+}
+.chef-image {
+  width: 300px;
+  flex-shrink: 0;
+}
+.chef-image img {
+  width: 100%;
+  display: block;
+}
+.chef-content {
+  flex: 1;
+}
+.chef-content{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.chef-tag{
+
+    color:#c97623;
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:500;
+    margin-bottom:16px;
+
+}
+.chef-content h2{
+
+    font-family:"Playfair Display",serif;
+    font-size:35px;
+    color:#f5f2ec;
+    margin-bottom:16px;
+
+}
+.chef-subtitle{
+    color:#bcbcbc;
+    font-size:15px;
+    line-height:1.1;
+    margin-bottom:15px;
+
+}
+
+.chef-description{
+    max-width:500px;
+    color:#c0b4b4;
+    line-height:1.9;
+    font-size:14px;
+    margin-bottom:34px;
+}
+.chef-btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 24px;
+    background:transparent;
+    border:1px solid #c97623;
+    border-radius:999px;
+    color:#c97623;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.chef-btn i{
+    font-size:22px;
+    transition:.3s;
+
+}
+
+.chef-btn:hover{
+    background:#d67d22;
+    color:#111;
+
+}
+
+.chef-btn:hover i{
+    transform:translateX(6px);
+}
+.chef-leaf{
+    position:absolute;
+    right:-25px;
+    bottom:-90px;
+    pointer-events:none;
+    opacity:.30;
+}
+
+.chef-leaf img{
+    width:300px;
+    display:block;
+}
+
+/* footer */
+
+.footer{
+    width:1094px;
+    margin:28px auto 0;
+    padding:18px 8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid rgba(255,145,40,.28);
+}
+
+.footer-left p{
+    color:#8f8f8f;
+    font-size:14px;
+}
+
+.footer-center{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.footer-center a{
+    color:#b9b9b9;
+    font-size:15px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-center a:hover{
+    color:#ff9628;
+}
+
+.footer-center span{
+    color:#ff9628;
+    font-size:8px;
+}
+
+.footer-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.footer-right p{
+    color:#b9b9b9;
+    font-size:15px;
+}
+
+.social-icons{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.social-icons a{
+    width:34px;
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(255,145,40,.55);
+    border-radius:50%;
+    color:#ff9628;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icons i{
+    font-size:16px;
+}
+
+.social-icons a:hover{
+    background:#ff9628;
+    color:#111;
+    transform:translateY(-2px);
+}
