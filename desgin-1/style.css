@@ -55,7 +55,7 @@ h1 {
     display: flex;
     position: absolute;
     width: 100%;
-    top: 45%;
+    top: 290px;
     justify-content: center;
     gap: 10px;
     cursor: pointer;
@@ -75,7 +75,7 @@ h1 {
 .cards {
     position: absolute;
     display: flex;
-    top: 57%;
+    top: 370px;
     gap: 20px;
     left: 0;
     width: 100%;
